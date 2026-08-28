@@ -448,13 +448,22 @@ pre[data-i18n="mentor-text"] {
     box-sizing: border-box;
 }
 
+.mentor-header,
+pre[data-i18n="mentor-text"] {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
 pre[data-i18n="mentor-text"] {
     white-space: pre-wrap;
-    overflow-wrap: break-word;
+    overflow-wrap: anywhere;
     word-break: normal;
-    overflow-x: hidden;
 
-    font-size: clamp(10px, 2.2vw, 16px);
+    /* Important : le texte ne sera pas masqué */
+    overflow: visible;
+
+    font-size: clamp(9px, 2.1vw, 16px);
     line-height: 1.5;
 
     margin: 0;
